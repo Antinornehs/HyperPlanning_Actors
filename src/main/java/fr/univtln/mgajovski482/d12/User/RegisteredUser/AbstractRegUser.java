@@ -1,6 +1,7 @@
 package fr.univtln.mgajovski482.d12.User.RegisteredUser;
 
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.Logs.RULogs;
+import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
+import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
 import fr.univtln.mgajovski482.d12.User.User;
 
 import java.util.HashMap;
@@ -13,24 +14,35 @@ import java.util.Map;
 public abstract class AbstractRegUser extends User {
 
     private static Map<String, AbstractRegUser> staticRegUsersMap =  new HashMap<String, AbstractRegUser>();
-    private final RULogs RULogs;
+    private final RUPersonalLogs ruPersonalLogs;
+    private final RUConnectionLogs ruConnectionLogs;
 
-    private String userName;
-
-    public AbstractRegUser(RULogs RULogs){
-        this.RULogs = RULogs;
-        userName = RULogs.getRuConnectionLogs().getEmail();
-        staticRegUsersMap.put(userName, this);
+    public AbstractRegUser(RUPersonalLogs ruPersonalLogs,
+                           RUConnectionLogs ruConnectionLogs){
+        this.ruPersonalLogs     = ruPersonalLogs;
+        this.ruConnectionLogs   = ruConnectionLogs;
+        staticRegUsersMap.put(ruConnectionLogs.getEmail(), this);
     }
 
     public static Map<String, AbstractRegUser> getStaticRegUsersMap() {
         return staticRegUsersMap;
     }
 
-    public RULogs getRULogs() {
-        return RULogs;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AbstractRegUser)) return false;
+        AbstractRegUser that = (AbstractRegUser) o;
+        return ruConnectionLogs.getEmail().equals(that.ruConnectionLogs.getEmail());
+
     }
 
+    @Override
+    public int hashCode() {
+        return ruConnectionLogs.getEmail().hashCode();
+    }
+
+    /*
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,12 +55,13 @@ public abstract class AbstractRegUser extends User {
     public int hashCode() {
         return userName.hashCode();
     }
-
+    */
 
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(RULogs);
+        stringBuilder.append(ruPersonalLogs);
+        stringBuilder.append(ruConnectionLogs);
         return stringBuilder.toString();
     }
 }

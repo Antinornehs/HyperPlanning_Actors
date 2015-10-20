@@ -1,4 +1,4 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.Logs;
+package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs;
 
 import fr.univtln.mgajovski482.d12.Other.Consts;
 

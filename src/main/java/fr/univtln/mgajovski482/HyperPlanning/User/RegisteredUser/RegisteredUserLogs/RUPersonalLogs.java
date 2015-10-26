@@ -1,6 +1,6 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs;
+package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs;
 
-import fr.univtln.mgajovski482.d12.Other.Consts;
+import fr.univtln.mgajovski482.HyperPlanning.Other.Consts;
 
 import java.util.*;
 

@@ -1,12 +1,9 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserGenerator;
+package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserGenerator;
 
 import com.google.gson.Gson;
-import fr.univtln.mgajovski482.d12.Other.Consts;
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.AbstractRegUser;
-import fr.univtln.mgajovski482.d12.User.User;
+import fr.univtln.mgajovski482.HyperPlanning.Other.Consts;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.AbstractRegUser;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collection;

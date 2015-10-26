@@ -1,4 +1,4 @@
-package fr.univtln.mgajovski482.d12.Other;
+package fr.univtln.mgajovski482.HyperPlanning.Other;
 
 import java.io.File;
 

@@ -1,10 +1,9 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser;
+package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser;
 
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
-import fr.univtln.mgajovski482.d12.User.User;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
+import fr.univtln.mgajovski482.HyperPlanning.User.User;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,7 +11,7 @@ import java.util.Map;
 /**
  * Created by Maxime on 28/09/2015.
  */
-public abstract class AbstractRegUser extends User implements Serializable{
+public abstract class AbstractRegUser extends User{
 
     public static Map<String, AbstractRegUser> staticRegUsersMap =  new HashMap<String, AbstractRegUser>();
     private final RUPersonalLogs ruPersonalLogs;

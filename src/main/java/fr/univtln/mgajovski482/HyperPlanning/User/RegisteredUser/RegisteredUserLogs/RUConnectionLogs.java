@@ -1,4 +1,4 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs;
+package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs;
 
 /**
  * Created by Maxime on 12/10/2015.

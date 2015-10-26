@@ -1,4 +1,4 @@
-package fr.univtln.mgajovski482.d12;
+package fr.univtln.mgajovski482.HyperPlanning;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

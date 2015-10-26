@@ -1,6 +1,4 @@
-package fr.univtln.mgajovski482.d12.User;
-
-import java.io.Serializable;
+package fr.univtln.mgajovski482.HyperPlanning.User;
 
 /**
  * Created by Maxime on 28/09/2015.

@@ -1,6 +1,6 @@
-package fr.univtln.mgajovski482.d12;
+package fr.univtln.mgajovski482.HyperPlanning;
 
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserGenerator.RUGenerator;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserGenerator.RUGenerator;
 
 import java.util.logging.Logger;
 

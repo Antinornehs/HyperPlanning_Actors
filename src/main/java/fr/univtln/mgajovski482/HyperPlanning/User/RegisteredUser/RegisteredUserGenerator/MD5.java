@@ -1,4 +1,4 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserGenerator;
+package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserGenerator;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

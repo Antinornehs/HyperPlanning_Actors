@@ -1,8 +1,8 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserFactory;
+package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserFactory;
 
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.*;
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.*;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
 
 import java.util.logging.Logger;
 
@@ -10,8 +10,6 @@ import java.util.logging.Logger;
  * Created by Maxime on 20/10/2015.
  */
 public class RUFactory {
-
-    private static Logger logger = Logger.getLogger("RUFactory.class");
 
     public static void createRegisteredUser(RUPersonalLogs ruPersonalLogs,
                                             RUConnectionLogs ruConnectionLogs) {

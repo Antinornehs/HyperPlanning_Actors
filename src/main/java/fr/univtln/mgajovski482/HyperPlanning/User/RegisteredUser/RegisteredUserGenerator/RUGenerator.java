@@ -1,9 +1,9 @@
-package fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserGenerator;
+package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserGenerator;
 
-import fr.univtln.mgajovski482.d12.Other.Consts;
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserFactory.RUFactory;
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
-import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
+import fr.univtln.mgajovski482.HyperPlanning.Other.Consts;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserFactory.RUFactory;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
+import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
 import org.jopendocument.dom.spreadsheet.Sheet;
 import org.jopendocument.dom.spreadsheet.SpreadSheet;
 

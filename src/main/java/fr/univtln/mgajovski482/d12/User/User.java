@@ -1,9 +1,11 @@
 package fr.univtln.mgajovski482.d12.User;
 
+import java.io.Serializable;
+
 /**
  * Created by Maxime on 28/09/2015.
  */
-public abstract class User {
+public abstract class User{
 
     public User(){
 

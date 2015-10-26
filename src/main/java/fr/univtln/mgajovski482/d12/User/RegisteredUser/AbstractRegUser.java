@@ -4,6 +4,7 @@ import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUConn
 import fr.univtln.mgajovski482.d12.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
 import fr.univtln.mgajovski482.d12.User.User;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,9 +12,9 @@ import java.util.Map;
 /**
  * Created by Maxime on 28/09/2015.
  */
-public abstract class AbstractRegUser extends User {
+public abstract class AbstractRegUser extends User implements Serializable{
 
-    private static Map<String, AbstractRegUser> staticRegUsersMap =  new HashMap<String, AbstractRegUser>();
+    public static Map<String, AbstractRegUser> staticRegUsersMap =  new HashMap<String, AbstractRegUser>();
     private final RUPersonalLogs ruPersonalLogs;
     private final RUConnectionLogs ruConnectionLogs;
 
@@ -24,38 +25,27 @@ public abstract class AbstractRegUser extends User {
         staticRegUsersMap.put(ruConnectionLogs.getEmail(), this);
     }
 
-    public static Map<String, AbstractRegUser> getStaticRegUsersMap() {
-        return staticRegUsersMap;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof AbstractRegUser)) return false;
         AbstractRegUser that = (AbstractRegUser) o;
         return ruConnectionLogs.getEmail().equals(that.ruConnectionLogs.getEmail());
-
     }
+
 
     @Override
     public int hashCode() {
         return ruConnectionLogs.getEmail().hashCode();
     }
 
-    /*
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof AbstractRegUser)) return false;
-        AbstractRegUser that = (AbstractRegUser) o;
-        return userName.equals(that.userName);
+    public RUPersonalLogs getRuPersonalLogs() {
+        return ruPersonalLogs;
     }
 
-    @Override
-    public int hashCode() {
-        return userName.hashCode();
+    public RUConnectionLogs getRuConnectionLogs() {
+        return ruConnectionLogs;
     }
-    */
 
     @Override
     public String toString() {

@@ -16,18 +16,22 @@ public class RUFactory {
     public static void createRegisteredUser(RUPersonalLogs ruPersonalLogs,
                                             RUConnectionLogs ruConnectionLogs) {
 
-        AbstractRegUser abstractRegUser;
+        AbstractRegUser abstractRegUser = null;
         RUPersonalLogs.Status currentStatus = ruPersonalLogs.getStatus();
         switch (currentStatus){
             case STUDENT:
                 abstractRegUser = new Student(ruPersonalLogs, ruConnectionLogs);
+                break;
             case DIRECTOR_OF_FORMATION:
                 abstractRegUser = new DirectorOfFormation(ruPersonalLogs, ruConnectionLogs);
+                break;
             case WEBMASTER:
                 abstractRegUser = new WebMaster(ruPersonalLogs, ruConnectionLogs);
+                break;
+
             case TEACHER:
                 abstractRegUser = new Teacher(ruPersonalLogs, ruConnectionLogs);
+                break;
         }
-        logger.info("User ( " + currentStatus + " )Created Correctly !");
     }
 }

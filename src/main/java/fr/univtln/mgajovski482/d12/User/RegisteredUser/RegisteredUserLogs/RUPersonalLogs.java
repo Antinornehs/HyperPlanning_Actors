@@ -11,25 +11,32 @@ public class RUPersonalLogs {
 
     public enum Status{
 
-        UNKNOWN                 ("Non renseigné"),
         STUDENT                 ("Eleve"),
         TEACHER                 ("Professeur"),
         WEBMASTER               ("Webmaster"),
         DIRECTOR_OF_FORMATION   ("Directeur de formation");
 
-        private String name = "";
+        private String name;
+        private static final List<Status>   VALUES =
+                Collections.unmodifiableList(Arrays.asList(STUDENT, TEACHER, DIRECTOR_OF_FORMATION));
+        private static final int            SIZE = values().length - 1;
+        private static final Random         RANDOM = new Random();
 
         Status(String name){
             this.name = name;
         }
 
         public static String[] getLabels(){
-            Status[]    stati = Status.values();
-            String[]    labels = new String[stati.length];
-            for(int i = 0; i < stati.length; i++)
-                labels[i] = stati[i].getLabel();
-            return  labels;
+            String[] names = new String[SIZE];
+            for(int i = 0; i < SIZE; i++)
+                names[i] = VALUES.get(i).getLabel();
+            return names;
         }
+
+        public static Status randomStatus()  {
+            return VALUES.get(RANDOM.nextInt(SIZE));
+        }
+
         public String getLabel(){
             return name;
         }
@@ -140,11 +147,11 @@ public class RUPersonalLogs {
         private final String        lastName;
         private final Calendar      dateOfBirth;
         private final boolean       isMale;
-        private String              phoneNumber     = Consts.DEFAULT_STRING_BLANK_VALUE;
-        private String              webSite         = Consts.DEFAULT_STRING_BLANK_VALUE;
-        private String              city            = Consts.DEFAULT_STRING_BLANK_VALUE;
-        private String              address         = Consts.DEFAULT_STRING_BLANK_VALUE;
-        private String              postalCode      = Consts.DEFAULT_STRING_BLANK_VALUE;
+        private String              phoneNumber     = Consts.DEFAULT_STRING_VALUE;
+        private String              webSite         = Consts.DEFAULT_STRING_VALUE;
+        private String              city            = Consts.DEFAULT_STRING_VALUE;
+        private String              address         = Consts.DEFAULT_STRING_VALUE;
+        private String              postalCode      = Consts.DEFAULT_STRING_VALUE;
 
         public RUPersonalLogsBuilder(Status status, boolean isMale, String lastName,
                                      String firstName, Calendar dateOfBirth) {

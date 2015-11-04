@@ -1,3 +1,4 @@
+
 package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserFactory;
 
 import fr.univtln.mgajovski482.HyperPlanning.Formation;

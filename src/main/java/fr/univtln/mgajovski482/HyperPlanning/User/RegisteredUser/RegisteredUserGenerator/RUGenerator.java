@@ -1,3 +1,4 @@
+
 package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserGenerator;
 
 import fr.univtln.mgajovski482.HyperPlanning.Other.Consts;

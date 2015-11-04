@@ -1,3 +1,4 @@
+
 package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser;
 
 import fr.univtln.mgajovski482.HyperPlanning.Formation;
@@ -16,7 +17,6 @@ import java.util.Map;
  */
 public abstract class AbstractRegUser extends User{
 
-    
     public static Map<String, AbstractRegUser>  staticRegUsersMap   =  new HashMap<String, AbstractRegUser>();
     private List<Formation>                     formations          = new ArrayList<Formation>();
     private final RUPersonalLogs                ruPersonalLogs;

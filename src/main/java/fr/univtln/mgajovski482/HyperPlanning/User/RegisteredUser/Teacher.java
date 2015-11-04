@@ -1,5 +1,3 @@
-
-
 package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser;
 
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;

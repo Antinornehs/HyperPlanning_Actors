@@ -20,17 +20,28 @@ public class RUFactory {
         RUPersonalLogs.Status currentStatus = ruPersonalLogs.getStatus();
         switch (currentStatus){
             case STUDENT:
-                abstractRegUser = new Student(ruPersonalLogs, ruConnectionLogs);
+                abstractRegUser = new Student(
+                        ruPersonalLogs,
+                        ruConnectionLogs);
                 break;
+
             case DIRECTOR_OF_FORMATION:
-                abstractRegUser = new DirectorOfFormation(ruPersonalLogs, ruConnectionLogs);
+                abstractRegUser = new DirectorOfFormation(
+                        ruPersonalLogs,
+                        ruConnectionLogs,
+                        Teacher.Grade.INSIDER,
+                        Teacher.getRandomDomain());
+
                 break;
             case WEBMASTER:
-                abstractRegUser = new WebMaster(ruPersonalLogs, ruConnectionLogs);
+                abstractRegUser = new WebMaster(
+                        ruPersonalLogs,
+                        ruConnectionLogs);
                 break;
 
             case TEACHER:
-                abstractRegUser = new Teacher(ruPersonalLogs,
+                abstractRegUser = new Teacher(
+                        ruPersonalLogs,
                         ruConnectionLogs,
                         Teacher.Grade.randomGrade(),
                         Teacher.getRandomDomain());

@@ -67,4 +67,3 @@ public class Teacher extends AbstractRegUser {
         return stringBuilder.toString();
     }
 }
-

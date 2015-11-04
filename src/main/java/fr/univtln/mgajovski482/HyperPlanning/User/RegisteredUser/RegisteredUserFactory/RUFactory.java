@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class RUFactory {
 
     public static AbstractRegUser createRegisteredUser(RUPersonalLogs ruPersonalLogs,
-                                            RUConnectionLogs ruConnectionLogs) {
+                                                       RUConnectionLogs ruConnectionLogs) {
 
         AbstractRegUser abstractRegUser = null;
         RUPersonalLogs.Status currentStatus = ruPersonalLogs.getStatus();
@@ -33,8 +33,6 @@ public class RUFactory {
                         ruConnectionLogs,
                         Teacher.Grade.randomGrade(),
                         Teacher.getRandomDomain());
-                System.out.println(abstractRegUser);
-
                 break;
         }
         return abstractRegUser;

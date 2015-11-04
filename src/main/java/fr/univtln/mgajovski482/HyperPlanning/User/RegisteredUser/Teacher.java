@@ -1,3 +1,5 @@
+
+
 package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser;
 
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
@@ -18,20 +20,20 @@ public class Teacher extends AbstractRegUser {
 
     public enum Grade {INSIDER,OUTSIDER;
 
-            private static final Random RANDOM      =
-                    new Random();
+        private static final Random RANDOM      =
+                new Random();
 
-            private static final List<Grade> VALUES =
-                    Collections.unmodifiableList(Arrays.asList(INSIDER, OUTSIDER));
+        private static final List<Grade> VALUES =
+                Collections.unmodifiableList(Arrays.asList(INSIDER, OUTSIDER));
 
-            private static final int SIZE =
-                    values().length - 1;
+        private static final int SIZE =
+                values().length - 1;
 
-            public static Grade randomGrade()  {
-                return VALUES.get(RANDOM.nextInt(SIZE));
-            }
-
+        public static Grade randomGrade()  {
+            return VALUES.get(RANDOM.nextInt(SIZE));
         }
+
+    }
 
 
     public  final Grade   grade;
@@ -65,3 +67,4 @@ public class Teacher extends AbstractRegUser {
         return stringBuilder.toString();
     }
 }
+

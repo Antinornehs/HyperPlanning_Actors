@@ -40,10 +40,9 @@ public abstract class AbstractRegUser extends User{
         return formations;
     }
 
-    public AbstractRegUser addFormations(Formation ...formations) {
+    public void addFormations(Formation ...formations) {
         for(Formation currentFormation : formations)
             this.formations.add(currentFormation);
-        return this;
     }
 
     @Override
@@ -64,7 +63,6 @@ public abstract class AbstractRegUser extends User{
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(ruPersonalLogs);
         stringBuilder.append(ruConnectionLogs);
-        stringBuilder.append(formations);
         return stringBuilder.toString();
     }
 }

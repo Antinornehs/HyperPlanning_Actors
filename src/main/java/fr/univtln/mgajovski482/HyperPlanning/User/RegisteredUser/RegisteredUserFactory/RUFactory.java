@@ -1,5 +1,6 @@
 package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserFactory;
 
+import fr.univtln.mgajovski482.HyperPlanning.Formation;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.*;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
@@ -11,8 +12,8 @@ import java.util.logging.Logger;
  */
 public class RUFactory {
 
-    public static void createRegisteredUser(RUPersonalLogs ruPersonalLogs,
-                                            RUConnectionLogs ruConnectionLogs) {
+    public static AbstractRegUser createRegisteredUser(RUPersonalLogs ruPersonalLogs,
+                                                       RUConnectionLogs ruConnectionLogs) {
 
         AbstractRegUser abstractRegUser = null;
         RUPersonalLogs.Status currentStatus = ruPersonalLogs.getStatus();
@@ -28,8 +29,12 @@ public class RUFactory {
                 break;
 
             case TEACHER:
-                abstractRegUser = new Teacher(ruPersonalLogs, ruConnectionLogs);
+                abstractRegUser = new Teacher(ruPersonalLogs,
+                        ruConnectionLogs,
+                        Teacher.Grade.randomGrade(),
+                        Teacher.getRandomDomain());
                 break;
         }
+        return abstractRegUser;
     }
 }

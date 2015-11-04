@@ -93,7 +93,7 @@ public class RUGenerator {
 
             ruConnectionLogs =
                     new RUConnectionLogs(
-                            userInformation[EMAIL],
+                            userInformation[EMAIL].toLowerCase(),
                             MD5.encode(userInformation[PASSWORD]));
 
             ruPersonalLogs =

@@ -29,7 +29,12 @@ public class RUFactory {
                 break;
 
             case TEACHER:
-                abstractRegUser = new Teacher(ruPersonalLogs, ruConnectionLogs);
+                abstractRegUser = new Teacher(ruPersonalLogs,
+                        ruConnectionLogs,
+                        Teacher.Grade.randomGrade(),
+                        Teacher.getRandomDomain());
+                System.out.println(abstractRegUser);
+
                 break;
         }
         return abstractRegUser;

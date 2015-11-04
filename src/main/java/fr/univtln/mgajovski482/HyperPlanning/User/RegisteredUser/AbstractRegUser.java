@@ -1,10 +1,13 @@
 package fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser;
 
+import fr.univtln.mgajovski482.HyperPlanning.Formation;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
 import fr.univtln.mgajovski482.HyperPlanning.User.User;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -13,9 +16,10 @@ import java.util.Map;
  */
 public abstract class AbstractRegUser extends User{
 
-    public static Map<String, AbstractRegUser> staticRegUsersMap =  new HashMap<String, AbstractRegUser>();
-    private final RUPersonalLogs ruPersonalLogs;
-    private final RUConnectionLogs ruConnectionLogs;
+    public static Map<String, AbstractRegUser>  staticRegUsersMap   =  new HashMap<String, AbstractRegUser>();
+    private List<Formation>                     formations          = new ArrayList<Formation>();
+    private final RUPersonalLogs                ruPersonalLogs;
+    private final RUConnectionLogs              ruConnectionLogs;
 
     public AbstractRegUser(RUPersonalLogs ruPersonalLogs,
                            RUConnectionLogs ruConnectionLogs){
@@ -32,6 +36,14 @@ public abstract class AbstractRegUser extends User{
         return ruConnectionLogs.getEmail().equals(that.ruConnectionLogs.getEmail());
     }
 
+    public List<Formation> getFormations() {
+        return formations;
+    }
+
+    public void addFormations(Formation ...formations) {
+        for(Formation currentFormation : formations)
+            this.formations.add(currentFormation);
+    }
 
     @Override
     public int hashCode() {

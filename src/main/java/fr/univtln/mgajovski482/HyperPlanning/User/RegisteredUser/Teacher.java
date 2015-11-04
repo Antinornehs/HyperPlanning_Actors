@@ -15,7 +15,6 @@ public class Teacher extends AbstractRegUser {
                     "Mathématiques", "Anglais", "Espagnol",
                     "Informatique", "Allemand"));
 
-
     public enum Grade {INSIDER,OUTSIDER;
 
         private static final Random RANDOM      =
@@ -33,8 +32,10 @@ public class Teacher extends AbstractRegUser {
 
     }
 
+    public static Map<String, Teacher> staticTeacherMap =
+            new HashMap<String, Teacher>();
 
-    public  final Grade   grade;
+    private final Grade   grade;
     private final String  domain;
     private static Random random = new Random();
 
@@ -46,6 +47,7 @@ public class Teacher extends AbstractRegUser {
         super(ruPersonalLogs,ruConnectionLogs);
         this.grade  = grade;
         this.domain = domain;
+        staticTeacherMap.put(ruConnectionLogs.getEmail(), this);
     }
 
     public String getDomain() {
@@ -55,6 +57,16 @@ public class Teacher extends AbstractRegUser {
     public static String getRandomDomain(){
         int size = domains.size() - 1;
         return domains.get(random.nextInt(size));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 
     @Override

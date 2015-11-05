@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public class DirectorOfFormation extends Teacher {
 
-    public Map<String, DirectorOfFormation> staticDirectorOfFormationMap
+    public static Map<String, DirectorOfFormation> staticDirectorOfFormationMap
             = new HashMap<String, DirectorOfFormation>();
 
     public DirectorOfFormation(

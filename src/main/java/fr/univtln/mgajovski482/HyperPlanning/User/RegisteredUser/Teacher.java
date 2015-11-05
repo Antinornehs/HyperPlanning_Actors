@@ -35,9 +35,9 @@ public class Teacher extends AbstractRegUser {
     public static Map<String, Teacher> staticTeacherMap =
             new HashMap<String, Teacher>();
 
-    private final Grade   grade;
-    private final String  domain;
-    private static Random random = new Random();
+    protected final Grade   grade;
+    protected final String  domain;
+    protected static Random random = new Random();
 
     public Teacher(
             RUPersonalLogs ruPersonalLogs,

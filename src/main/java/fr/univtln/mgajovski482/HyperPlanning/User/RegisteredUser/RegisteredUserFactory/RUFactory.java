@@ -6,7 +6,8 @@ import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.*;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUConnectionLogs;
 import fr.univtln.mgajovski482.HyperPlanning.User.RegisteredUser.RegisteredUserLogs.RUPersonalLogs;
 
-import java.util.logging.Logger;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Maxime on 20/10/2015.

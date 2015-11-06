@@ -54,6 +54,10 @@ public class Teacher extends AbstractRegUser {
         return domain;
     }
 
+    public Grade getGrade() {
+        return grade;
+    }
+
     public static String getRandomDomain(){
         int size = domains.size() - 1;
         return domains.get(random.nextInt(size));

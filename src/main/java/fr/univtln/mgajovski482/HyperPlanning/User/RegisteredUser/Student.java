@@ -44,4 +44,11 @@ public class Student extends AbstractRegUser {
     public boolean equals(Object o) {
         return super.equals(o);
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+"Student{" +
+                "formation=" + formation +
+                '}';
+    }
 }
